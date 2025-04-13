@@ -1,0 +1,11 @@
+# Используем образ с Python
+From python:3
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем исходный код в контейнер
+COPY Insclass_Classification.IPYNB /app/Insclass_Classification.IPYNB
+
+# Запускаем приложение при старте контейнера
+CMD ["python", "/app/Insclass_Classification.IPYNB"]
